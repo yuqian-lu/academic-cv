@@ -1,20 +1,37 @@
+% !TEX encoding = UTF-8 Unicode
+% !TEX TS-program = XeLaTeX
+% ! xelatex mal-urdu.tex
+
 \documentclass[a4paper, 10pt]{article}
+
+\usepackage{fontspec}
+\usepackage{newtxmath}
+\setmainfont{Gentium Plus}
+
+\usepackage{polyglossia}
+\setmainlanguage{english}
+\setotherlanguage{urdu}
+%\newfontfamily\urdufont[Script=Arabic,Language=Urdu,Scale=1]{Jameel Noori Nastaleeq Kasheeda}
+%\newfontfamily\urdufont[Script=Arabic,Language=Urdu,Scale=1]{Jameel Noori Nastaleeq}
+\newfontfamily\urdufont[Script=Arabic,Language=Urdu,Scale=1]{Nafees Nastaleeq}
+
+
 \usepackage[]{geometry} 
 \usepackage{graphicx}
 \usepackage{amssymb}
-\usepackage{xcolor}
+\usepackage[xcdraw,svgnames]{xcolor}
 \usepackage{epstopdf}
 \usepackage[pdftex]{hyperref}
 
 
-\usepackage{times}
+%\usepackage{times}
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 \geometry{
  a4paper,
  total={160mm,255mm}
  }
 
-\title{{\Huge\bf Muhammad Yaseen Khan}\\\small Academic Curriculum Vit\ae}
+\title{{\Huge\bf Muhammad Yaseen Khan} $\cdot$ {\huge\bf\texturdu{محمد یاسین خان}}\\\small Academic Curriculum Vit\ae}
 \author{}
 \date{}      
 
@@ -52,30 +69,25 @@ Karachi University, 2007--2010. Advisors: Dr. Humera Tariq and Dr. Tahseen A. Ji
 % Positions Held
 
 \section*{\normalfont\textsc{Positions Held}}
-\hfill\begin{minipage}{0.23\textwidth}
-Jan. 2017--Present\textcolor{lightgray}{\dotfill}\\\\
-Jan. 2019 -- Present \textcolor{lightgray}{\dotfill}\\
-Jan. 2016--Mar. 2017\textcolor{lightgray}{\dotfill}\\
-June 2013--Dec. 2016\textcolor{lightgray}{\dotfill}\\\\
-May 2012--June 2013\textcolor{lightgray}{\dotfill}\\\\
-Jan. 2011--Feb. 2012\textcolor{lightgray}{\dotfill}\\
-July. 2010--Dec. 2010\textcolor{lightgray}{\dotfill}\\
-Jan. 2010--June. 2010\textcolor{lightgray}{\dotfill}
-\end{minipage}
-\begin{minipage}{0.75\textwidth}
-Senior Lecturer, Department of Computer Science, Faculty of Computing and Engineering, Mohammad Ali Jinnah University (MAJU), Karachi\\
-AI/Software Developer, AskIQ\\
-Data Scientist, Cubix Co.\\
-Lecturer, College of Computing and Information Sciences, Karachi Institute of Economics \& Technology (KIET), Karachi\\
-Software Engineer II, Mazik Global Technologies/ Microsoft Inc./ Tyler Technologies Inc.\\
-Web and iOS Application Developer, Counterpoint/Qurtaba LLC\\
-Web Developer, Revolutionary Technologies\\
-Web Developer, Sprintech Solutions
-\end{minipage}
+\begin{table}[h]
+\vspace{-1em}
+\setlength\tabcolsep{1.5pt}
+\begin{tabular}{ll}
+\begin{tabular}[c]{@{}l@{}}Jan. 2017--Present\textcolor{lightgray}{$\ldots$}\\\ \end{tabular}& \begin{tabular}[c]{@{}l@{}}Senior Lecturer, Department of Computer Science, Faculty of Computing,\\ Mohammad Ali Jinnah University, Karachi\end{tabular} \\
+Jan. 2019--Present\textcolor{lightgray}{$\ldots$}& AI/Software Developer, AskIQ \\
+Jan. 2016--Mar. 2017\textcolor{lightgray}{$\ldots$}& Data Scientist, Cubix Co. \\
+\begin{tabular}[c]{@{}l@{}}June 2013--Dec. 2016\textcolor{lightgray}{$\ldots$}\\\ \end{tabular}& \begin{tabular}[c]{@{}l@{}}Lecturer, College of Computing and Information Sciences,\\Karachi Institute of Economics \& Technology (KIET), Karachi\end{tabular} \\
+May 2012--June 2013\textcolor{lightgray}{$\ldots$} & Software Engineer II, Mazik Global Technologies/ Microsoft Inc./ Tyler Technologies Inc. \\
+Jan. 2011--Feb. 2012\textcolor{lightgray}{$\ldots$} & Web and iOS Application Developer, Counterpoint/Qurtaba LLC \\
+July. 2010--Dec. 2010\textcolor{lightgray}{$\ldots$} & Web Developer, Revolutionary Technologies \\
+Jan. 2010--June. 2010\textcolor{lightgray}{$\ldots$} & Web Developer, Sprintech Solutions
+\end{tabular}
+\vspace{-1em}
+\end{table}
 
 % Teaching
 \section*{\normalfont\textsc{Teaching}}
-\hfill\begin{minipage}{0.23\textwidth}
+\begin{minipage}{0.23\textwidth}
 Spring 2020\textcolor{lightgray}{\dotfill}\\
 Fall 2019\textcolor{lightgray}{\dotfill}\\
 Summer 2019\textcolor{lightgray}{\dotfill}\\
@@ -114,11 +126,11 @@ Courses taught to undergrad students at KIET in different semesters: Programming
 \section*{\normalfont\textsc{University Committees}}
 \begin{enumerate}
 \itemsep-4pt 
+\item Examination Paper Moderation Committee, MAJU, Karachi (2018--present)
 \item QEC Self-Assessment Report (SAR) for undergraduate and graduate CS and SE programmes, MAJU, Karachi (2019)
 \item External Course Review, KIET, Karachi (2019)
 \item Internal Facilitator for NCEAC, MAJU, Karachi (2019)
 \item Graduate Thesis Evaluation Committee, MAJU, Karachi (2018--present)
-\item Examination Paper Moderation Committee, MAJU, Karachi (2018--present)
 \item Academic Advisor, MAJU, Karachi (2017--persent)
 \item Final Year Project Evaluation/Exhibition Committee, MAJU, Karachi (2017--present)
 \item Founding Faculty Sponsor of ACM-MAJU Student Chapter, MAJU, Karachi (2017--present)
@@ -136,23 +148,23 @@ Courses taught to undergrad students at KIET in different semesters: Programming
 \end{enumerate}
 
 \section*{\normalfont\textsc{Publications}}
-Items are sorted chronologically in reverse order.
+\vspace{-1em}Items are sorted chronologically in reverse order.
 \subsection*{\normalfont\textsc{ Refereed Journal Articles}}
 \begin{enumerate}
 \itemsep-4pt 
-	\item ``Combining Lexicon-Based and Machine Learning Techniques for Sentiment Analysis: A Hybrid Approach''. Muhammad Yaseen Khan and Khurum Nazir Junejo. \emph{\small under review.}
+	\item ``Combining Lexicon-Based and Machine Learning Techniques for Sentiment Analysis: A Hybrid Approach''. \textcolor{NavyBlue}{Muhammad Yaseen Khan} and Khurum Nazir Junejo. \emph{\small under review.}
        
-	\item ``Depressive Sentiment Analysis in Microblogs: A Machine Learning Approach''. Shah Muhammad Emaduddin, Kamran Ahsan, Muhammad Yaseen Khan, and Sohaib Ahmed; \emph{\small under review.}
+	\item ``Depressive Sentiment Analysis in Microblogs: A Machine Learning Approach''. Shah Muhammad Emaduddin, Kamran Ahsan, \textcolor{NavyBlue}{Muhammad Yaseen Khan}, and Sohaib Ahmed; \emph{\small under review.}
        
-    \item ``Sentiment Analysis of Product Reviews in the Absence of Labelled Data using Supervised Learning Approaches''. Warqar Muhammad, Maria Mushtaq, Khuram Nazir Junejo, and Muhammad Yaseen Khan; \emph{Malaysian Journal of Computer Science}, volume 32, number 2, pages 118--132, 2020. Indexed in Clarivate Analytics' SCI. JCR IF:0.7. DOI: \href{10.22452/mjcs.vol33no2.3}{10.22452/mjcs.vol33no2.3}
+    \item ``Sentiment Analysis of Product Reviews in the Absence of Labelled Data using Supervised Learning Approaches''. Warqar Muhammad, Maria Mushtaq, Khuram Nazir Junejo, and \textcolor{NavyBlue}{Muhammad Yaseen Khan}; \emph{Malaysian Journal of Computer Science}, volume 32, number 2, pages 118--132, 2020. Indexed in Clarivate Analytics' SCI. JCR IF:0.7. DOI: \href{10.22452/mjcs.vol33no2.3}{10.22452/mjcs.vol33no2.3}
     
-    \item ``Depression Detection using Na\"{\i}ve Bayes: Text based approach''. Shah Muhammad Emad, Kamran Ahsan, Muhammad Yaseen Khan, Shoaib Ahmed, Rafi Ullah, Kashif Rizwan, and Farhan Shafiq; \emph{Interciencia}, volume 44, number 11, pages 174--182, 2020. Indexed in Clarivate Analytics' SCIE. JCR IF:0.26.
+    \item ``Depression Detection using Na\"{\i}ve Bayes: Text based approach''. Shah Muhammad Emad, Kamran Ahsan, \textcolor{NavyBlue}{Muhammad Yaseen Khan}, Shoaib Ahmed, Rafi Ullah, Kashif Rizwan, and Farhan Shafiq; \emph{Interciencia}, volume 44, number 11, pages 174--182, 2020. Indexed in Clarivate Analytics' SCIE. JCR IF:0.26.
 	
-	\item ``On Extraction of Event Information from Social Text Stream: An Unpretentious NLP Solution''. Kanwal Iqbal, Muhammad Yaseen Khan, Shaukat Wasi, Shumaila Mahboob, and Tafseer Ahmed; \emph{International Journal of Computer Science and Network Security}, volume 19, number 9, pages 121--131, 2019. Indexed in Clarivate Analytics' ESCI.
+	\item ``On Extraction of Event Information from Social Text Stream: An Unpretentious NLP Solution''. Kanwal Iqbal, \textcolor{NavyBlue}{Muhammad Yaseen Khan}, Shaukat Wasi, Shumaila Mahboob, and Tafseer Ahmed; \emph{International Journal of Computer Science and Network Security}, volume 19, number 9, pages 121--131, 2019. Indexed in Clarivate Analytics' ESCI.
  
-	\item ``A Novel Approach For Ontology-Driven Information Retrieving Chatbot For Fashion Brands''. Aisha Nazir, Muhammad Yaseen Khan, Tafseer Ahmed, Syed Imran Jami, and Tafseer Ahmed; \emph{International Journal of Advanced Computer Science and Applications}, volume 10, number 9, pages 546--552, 2019. Indexed in Clarivate Analytics' ESCI. 
+	\item ``A Novel Approach For Ontology-Driven Information Retrieving Chatbot For Fashion Brands''. Aisha Nazir, \textcolor{NavyBlue}{Muhammad Yaseen Khan}, Tafseer Ahmed, Syed Imran Jami, and Shaukat Wasi; \emph{International Journal of Advanced Computer Science and Applications}, volume 10, number 9, pages 546--552, 2019. Indexed in Clarivate Analytics' ESCI. 
       
-	\item ``Developing Disease Classification System based on Keyword Extraction and Supervised Learning''. Muhammad Suffian, Muhammad Yaseen Khan, and Shaukat Wasi; \emph{International Journal of Advanced Computer Science and Applications}, volume 9, number 9, pages 599--605, 2018. Indexed in Clarivate Analytics' ESCI.
+	\item ``Developing Disease Classification System based on Keyword Extraction and Supervised Learning''. Muhammad Suffian, \textcolor{NavyBlue}{Muhammad Yaseen Khan}, and Shaukat Wasi; \emph{International Journal of Advanced Computer Science and Applications}, volume 9, number 9, pages 599--605, 2018. Indexed in Clarivate Analytics' ESCI.
 \end{enumerate}
 
 
@@ -160,9 +172,9 @@ Items are sorted chronologically in reverse order.
 \begin{enumerate}
 \setcounter{enumi}{7}
 \itemsep-4pt 
- \item ``Pseudo Transfer Learning by Exploiting Monolingual Corpus: An Experiment on Roman Urdu Transliteration''. Muhammad Yaseen Khan and Tafseer Ahmed; in: Bajwa I., Sibalija T., Jawawi D. (eds) Intelligent Technologies and Applications. INTAP 2019. \emph{Communications in Computer and Information Science}, vol 1198. Springer, Singapore. DOI \href{https://doi.org/10.1007/978-981-15-5232-8_36}{10.1007/978-981-15-5232-8\_36}.
+ \item ``Pseudo Transfer Learning by Exploiting Monolingual Corpus: An Experiment on Roman Urdu Transliteration''. \textcolor{NavyBlue}{Muhammad Yaseen Khan} and Tafseer Ahmed; in: Bajwa I., Sibalija T., Jawawi D. (eds) Intelligent Technologies and Applications. INTAP 2019. \emph{Communications in Computer and Information Science}, vol 1198. Springer, Singapore. DOI \href{https://doi.org/10.1007/978-981-15-5232-8_36}{10.1007/978-981-15-5232-8\_36}.
   
-   \item ``Towards a Generic Approach for PoS Tag-wise Lexical Similarity of Languages''. Muhammad Suffian Nizami, Muhammad Yaseen Khan and Tafseer Ahmed; in: Bajwa I., Sibalija T., Jawawi D. (eds) Intelligent Technologies and Applications. INTAP 2019. \emph{Communications in Computer and Information Science}, vol 1198. Springer, Singapore. DOI \href{https://doi.org/10.1007/978-981-15-5232-8_42}{10.1007/978-981-15-5232-8\_42}.
+   \item ``Towards a Generic Approach for PoS Tag-wise Lexical Similarity of Languages''. Muhammad Suffian Nizami, \textcolor{NavyBlue}{Muhammad Yaseen Khan} and Tafseer Ahmed; in: Bajwa I., Sibalija T., Jawawi D. (eds) Intelligent Technologies and Applications. INTAP 2019. \emph{Communications in Computer and Information Science}, vol 1198. Springer, Singapore. DOI \href{https://doi.org/10.1007/978-981-15-5232-8_42}{10.1007/978-981-15-5232-8\_42}.
    
  \end{enumerate}
 
@@ -170,21 +182,23 @@ Items are sorted chronologically in reverse order.
 \begin{enumerate}
 \setcounter{enumi}{9}
 \itemsep-4pt 
-\item ``Discovering Lexical Similarity Through Articulatory Feature-based Phonetic Edit Distance''. Tafseer Ahmed, Muhammad Suffian Nizami, Muhammad Yaseen Khan; \emph{\small submitted.}
+\item ``Edit Distance-based Search Approach for Retrieving  Element-wise Prosody in Hindi/Urdu Poetry''. \textcolor{NavyBlue}{Muhammad Yaseen Khan}, Muhammad Adil Rao, Shuakat Wasi, Twaha Ahmed Minai; \emph{\small submitted.}
 
-\item ``Sign Language Translation in Urdu/Hindi Through Microsoft Kinect''. Sohail, Muhammad Yaseen Khan, Nisar Ahmed Siddiqui, and Kiran; in \emph{Proceedings of the 3rd Pak-Turk Conference On Emerging Technologies}, GIKI, Pakistan. June. 2020.
+\item ``Discovering Lexical Similarity Through Articulatory Feature-based Phonetic Edit Distance''. Tafseer Ahmed, Muhammad Suffian Nizami, \textcolor{NavyBlue}{Muhammad Yaseen Khan}; \emph{\small submitted.}
 
-\item ``Urdu~Sentiment~Corpus (v1.0): Linguistic Exploration and Visualization of Labeled Dataset for Urdu~Sentiment~Analysis''. Muhammad Yaseen Khan and Tafseer Ahmed; in \emph{Proceedings of the 2nd IEEE International Conference On Information Science \& Communication Technology}, Karachi, Pakistan. Feb. 2020. DOI: \href{10.1109/ICISCT49550.2020.9080043}{10.1109/ICISCT49550.2020.9080043}.
+\item ``Sign Language Translation in Urdu/Hindi Through Microsoft Kinect''. Sohail, \textcolor{NavyBlue}{Muhammad Yaseen Khan}, Nisar Ahmed Siddiqui, and Kiran; in \emph{Proceedings of the 3rd Pak-Turk Conference On Emerging Technologies}, GIKI, Pakistan. June. 2020.
 
- \item ``Pseudo Transfer Learning by Exploiting Monolingual Corpus: An Experiment on Roman Urdu Transliteration''. Muhammad Yaseen Khan and Tafseer Ahmed; in \emph{Proceedings of the 2nd International Conference on Intelligent Technologies and Applications}, Islamia University Bhawalpur, Pakistan. Springer. Nov. 2019.
+\item ``Urdu~Sentiment~Corpus (v1.0): Linguistic Exploration and Visualization of Labeled Dataset for Urdu~Sentiment~Analysis''. \textcolor{NavyBlue}{Muhammad Yaseen Khan} and Tafseer Ahmed; in \emph{Proceedings of the 2nd IEEE International Conference On Information Science \& Communication Technology}, Karachi, Pakistan. Feb. 2020.\\DOI: \href{10.1109/ICISCT49550.2020.9080043}{10.1109/ICISCT49550.2020.9080043}.
+
+ \item ``Pseudo Transfer Learning by Exploiting Monolingual Corpus: An Experiment on Roman Urdu Transliteration''. \textcolor{NavyBlue}{Muhammad Yaseen Khan} and Tafseer Ahmed; in \emph{Proceedings of the 2nd International Conference on Intelligent Technologies and Applications}, Islamia University Bhawalpur, Pakistan. Springer. Nov. 2019.
  
-  \item ``Towards a Generic Approach for PoS Tag-wise Lexical Similarity of Languages''. Muhammad Suffian Nizami, Muhammad Yaseen Khan and Tafseer Ahmed; in \emph{Proceedings of the 2nd International Conference on Intelligent Technologies and Applications}, Islamia University Bhawalpur, Pakistan. Springer. Nov. 2019.
+  \item ``Towards a Generic Approach for PoS Tag-wise Lexical Similarity of Languages''. Muhammad Suffian Nizami, \textcolor{NavyBlue}{Muhammad Yaseen Khan} and Tafseer Ahmed; in \emph{Proceedings of the 2nd International Conference on Intelligent Technologies and Applications}, Islamia University Bhawalpur, Pakistan. Springer. Nov. 2019.
   
-  \item ``Practices for Achieving Accuracy in Software Costing and Estimation''. Mohammad Ayub Latif, Muhammad Yaseen Khan, and Kashif Bashir; in \emph{Proceedings of the 2nd International Conference on Computing \& Information Sciences}, Karachi Institute of Economics and Technology, Karachi, Pakistan. Nov. 2018.
+  \item ``Practices for Achieving Accuracy in Software Costing and Estimation''. Mohammad Ayub Latif, \textcolor{NavyBlue}{Muhammad Yaseen Khan}, and Kashif Bashir; in \emph{Proceedings of the 2nd International Conference on Computing \& Information Sciences}, Karachi Institute of Economics and Technology, Karachi, Pakistan. Nov. 2018.
   
-  \item ``Drive pattern analyzer using smartphones''. Shumaila Mahboob, Kanwal Iqbal, Hira Farman, Muhammad Yaseen Khan, and Shaukat Wasi; in \emph{ Proceedings of the 13th IEEE International Conference on Emerging Technologies}, Capital University of Science and Technology, Islamabad, Pakistan. IEEE, pages 1-5, 2017.
+  \item ``Drive pattern analyzer using smartphones''. Shumaila Mahboob, Kanwal Iqbal, Hira Farman, \textcolor{NavyBlue}{Muhammad Yaseen Khan}, and Shaukat Wasi; in \emph{ Proceedings of the 13th IEEE International Conference on Emerging Technologies}, Capital University of Science and Technology, Islamabad, Pakistan. IEEE, pages 1-5, 2017.
   
-  \item ``Harnessing English Sentiment Lexicons for Polarity Detection in Urdu Tweets: A Baseline Approach''. Muhammad Yaseen Khan, Shah Muhammad Emaduddin, and Khurum Nazir Junejo;  in \emph{Proceedings of the 11th IEEE International Conference on Semantic Computing}, San Diago, USA. IEEE, pages. 242-24, 2017.
+  \item ``Harnessing English Sentiment Lexicons for Polarity Detection in Urdu Tweets: A Baseline Approach''. \textcolor{NavyBlue}{Muhammad Yaseen Khan}, Shah Muhammad Emaduddin, and Khurum Nazir Junejo;  in \emph{Proceedings of the 11th IEEE International Conference on Semantic Computing}, San Diago, USA. IEEE, pages. 242-24, 2017.
 \end{enumerate}
 
 \subsection*{\normalfont\textsc{Conference and Workshop Attendee}}
@@ -209,11 +223,11 @@ Artificial Neural Networks/Deep Learning $\cdot$ Natural Language Processing $\c
 
 \section*{\normalfont\textsc{Skills}}
 \hfill\begin{minipage}{0.17\textwidth}
-Computing\textcolor{lightgray}{\dotfill}\\\\\\
+Computing\textcolor{lightgray}{\dotfill}\\
 Languages\textcolor{lightgray}{\dotfill}
 \end{minipage}%
 \begin{minipage}{0.8\textwidth}
-Python $\cdot$ Scikit-Learn $\cdot$ Kears $\cdot$ NLTK $\cdot$ NumPy  $\cdot$ SciPy $\cdot$ Pandas $\cdot$ BeautifulSoup $\cdot$ MatPlotLib $\cdot$ SeaBorn $\cdot$ MatLab $\cdot$ Java2SE $\cdot$ C\# $\cdot$ yEd $\cdot$ Git $\cdot$ Anaconda $\cdot$ PHP $\cdot$ JavaScript $\cdot$ MySQL $\cdot$ \LaTeX\\
+Programming (Python, Java, JavaScript, C\#, MySQL)$\cdot$ Typesetting with \LaTeX\\
 English $\cdot$ Urdu $\cdot$ Sindhi $\cdot$ Punjabi $\cdot$ Hindi $\cdot$ Arabic $\cdot$ Persian/Farsi $\cdot$ Pushto 
 \end{minipage}
 
