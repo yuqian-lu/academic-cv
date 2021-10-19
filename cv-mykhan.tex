@@ -2,11 +2,23 @@
 % !TEX TS-program = XeLaTeX
 % ! xelatex mal-urdu.tex
 \documentclass[a4paper, 10pt]{article}
+\usepackage{soul}
+\setulcolor{Gainsboro}
+\setul{2pt}{1.5pt}
+\newcommand{\ublue}[1]{{\color{Indigo}\ul{#1}}}
+
+
+\newcommand{\qone}{\colorbox{YellowGreen}{\makebox(10,9){\textcolor{white}{\ Q1}}}}
+\newcommand{\qtwo}{\colorbox{Gold}{\makebox(10,9){\textcolor{white}{\ Q2}}}}
+\newcommand{\qthree}{\colorbox{DarkOrange}{\makebox(10,9){\textcolor{white}{Q3}}}}
+\newcommand{\qfour}{\colorbox{Tomato}{\makebox(10,9){\textcolor{white}{\ Q4}}}}
+
 
 \usepackage{fontspec}
 \usepackage{newtxmath}
 %\setmainfont{Gentium Plus}
 \setmainfont{Charter Regular.ttf}[BoldFont = Charter Bold.ttf , ItalicFont = Charter Italic.ttf , BoldItalicFont = Charter Bold Italic.ttf ]
+%\setmainfont{Times New Roman}
 
 \usepackage{polyglossia}
 \setmainlanguage{english}
@@ -15,32 +27,43 @@
 %\newfontfamily\urdufont[Script=Arabic,Language=Urdu,Scale=1]{Jameel Noori Nastaleeq}
 \newfontfamily\urdufont[Script=Arabic,Language=Urdu,Scale=1]{alvi-lahori-nastaleeq.ttf}
 
-
-\usepackage[]{geometry} 
+\usepackage[]{geometry}
 \usepackage{graphicx}
 \usepackage{amssymb}
 \usepackage[xcdraw,svgnames]{xcolor}
+
+
 \usepackage{epstopdf}
 \usepackage[pdftex]{hyperref}
+
+\usepackage{tcolorbox}
+\newtcbox{\blogtag}{nobeforeafter,
+colframe=Silver,colback=white,
+boxrule=0.5pt,arc=4pt,
+boxsep=0pt,left=3pt,right=3pt,top=4pt,bottom=4pt,tcbox raise base}
+
+%\newcommand\dunderline[3][-1pt]{{%
+% \sbox0{#3}%
+% \ooalign{\copy0\cr\rule[\dimexpr#1-#2\relax]{\wd0}{#2}}}}
 
 
 %\usepackage{times}
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 \geometry{
- a4paper,
- total={190mm,255mm}}
+a4paper,
+total={190mm,255mm}}
 
-\title{{\huge Muhammad Yaseen Khan}
- $\cdot$ {\huge\texturdu{محمد یاسین خان}}
+\title{\vspace{-3em}{\bfseries\huge\textcolor{NavyBlue}{Muhammad Yaseen Khan}}
+%$\cdot$ {\huge\texturdu{محمد یاسین خان}}
 %\\\small Academic Curriculum Vit\ae}
 \\\small Curriculum Vit\ae}
 \author{}
-\date{}      
+\date{}
 
 \begin{document}
 \maketitle
 \vspace{-3em}
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.49\textwidth}
 %Centre for Language Computing\\
 %Department of Computer Science\\
 %Mohammad Ali Jinnah University, Karachi\\
@@ -50,143 +73,209 @@ Pakistan\\
 \hfill
 \end{minipage}
 \hfill
-\begin{minipage}{0.45\textwidth}
+\begin{minipage}{0.49\textwidth}
 Tel: \href{tel:+923323240104}{+92-332-3240104}\\
 Email: \href{mailto:yaseenkhan.yzai@gmail.com}{yaseenkhan.yzai@gmail.com}\\
 Skype: muhammad\_yaseen\_khan\\
 URL: \href{https://scholar.google.com/citations?user=a_d2KTEAAAAJ&hl=en}{\textcolor{blue}{Google Scholar}} $\cdot$ \href{https://www.researchgate.net/profile/Muhammad_Yaseen_Khan}{\textcolor{blue}{ResearchGate}} $\cdot$ \href{https://www.github.com/MuhammadYaseenKhan}{\textcolor{blue}{GitHub}}
 \end{minipage}
 
-% Educational Background 
+% Educational Background
 
-\section*{\normalfont\textsc{Educational Background}}
+\subsection*{\textcolor{NavyBlue}{Education}}
 {
 \tabcolsep=3pt
 \begin{tabular}{llll}
 PhD (CS) & Mohammad Ali Jinnah University & 2018--cont'd. & Advisors: Dr. Tafseer Ahmed and Dr. Shaukat Wasi\\
-MS (SE) & Karachi Institute of Economis \& Technology & 2014--2015 & Advisors: Dr. Khurram N. Junejo\\
+MS (SE) & Karachi Institute of Economics \& Technology & 2014--2015 & Advisor: Dr. Khurram N. Junejo\\
 BS (SE) & University of Karachi & 2007--2010 & Advisors: Dr. Humera Tariq and Dr. Tahseen A. Jilani\\
 \end{tabular}
 }
 
-\section*{\normalfont\textsc{Positions Held}}
+\subsection*{\textcolor{NavyBlue}{Areas of Interest}}
+Computational Linguistics $\cdot$ Natural language processing (NLP) $\cdot$ Information Extraction $\cdot$ Information Retrieval $\cdot$ Lexical Semantics $\cdot$ Emotions in Language $\cdot$ Sentiment Analysis $\cdot$ Information Visualization $\cdot$ Psycholinguistics $\cdot$ Computational Social Science.
+
+
+\subsection*{\textcolor{NavyBlue}{Positions Held}}
+{\bfseries Current}\\
 {
 \tabcolsep=4pt
 \begin{tabular}{lll}
-Feb. 2021--Present & Principal R\&D Engineer & Love For Data, Karachi, Pakistan \\
-Jan. 2017--Feb. 2021 & Senior Lecturer & DCS, FoC, Muhammad Ali Jinnah University, Karachi,   Pakistan \\
-Jan. 2019--Dec. 2019 & AI/Software Developer & AskIQ, Karachi, Pakistan \\
-Jan. 2016--Mar. 2017 & Data Scientist & Cubix Co., Karachi, Pakistan \\
-Jun. 2013--Dec. 2016 & Lecturer & CoCIS, Karachi Institute of Economics \& Technology, Khi, Pakistan \\
-Feb. 2012--Jun. 2013 & Software Engineer II & Mazik Global Technologies, Khi, Pakistan / Microsoft Inc., Renton, USA \\
-Jan. 2011--Feb. 2012 & Web+iOS App. Developer & Counterpoint, Karachi, Pakistan / Qurtaba LLC., Fremont, USA \\
-Jul. 2010--Dec. 2010 & Web Developer & Revolutionary Technologies, Karachi, Pakistan\\
-Jan. 2010--Jun. 2010 & Web Developr (Intern) & SprintTechSolutions, Karachi, Pakistan
+Feb. 2021--Present\ \ \ \ \ \ & {\it Principal R\&D Engineer}\ \ \ \ \ & Love For Data, Karachi, Pakistan\\
+\end{tabular}
+}\\\\
+{\bfseries Previous}\\
+{
+\tabcolsep=4pt
+\begin{tabular}{lll}
+Jan. 2017--Feb. 2021 & {\it Senior Lecturer} & DCS, FoC, Muhammad Ali Jinnah University, Karachi, Pakistan \\
+Jan. 2019--Dec. 2019 & {\it AI/Software Developer} & AskIQ, Karachi, Pakistan \\
+Jan. 2016--Mar. 2017 & {\it Data Scientist} & Cubix Co., Karachi, Pakistan \\
+Jun. 2013--Dec. 2016 & {\it Lecturer} & CoCIS, Karachi Institute of Economics \& Technology, Khi, Pakistan \\
+Feb. 2012--Jun. 2013 & {\it Software Engineer II} & Mazik Global Technologies, Khi, Pakistan / Microsoft Inc., Renton, USA \\
+Jan. 2011--Feb. 2012 & {\it Web+iOS App. Developer} & Counterpoint, Karachi, Pakistan / Qurtaba LLC., Fremont, USA \\
+Jul. 2010--Dec. 2010 & {\it Web Developer} & Revolutionary Technologies, Karachi, Pakistan\\
+Jan. 2010--Jun. 2010 & {\it Web Developr (Intern)} & SprintTechSolutions, Karachi, Pakistan
 \end{tabular}
 }
 
+\subsection*{\textcolor{NavyBlue}{Project Highlights}}
+\subsubsection*{Industrial Projects}
+\begin{enumerate}
+\itemsep = 0em
+\item {\it \href{https://kashat.com.eg/en/}{\textcolor{blue}{Kashat Micro-Financing}}} - helps {customer credit scoring} and {churn prediction} with NLP in/of {Arabic}
+and {English} data; the main features are itemized below:
+\begin{itemize}
+\itemsep = 0em
 
+\item Customer {services subscription identification} through inbox SMSs.
+
+\item {Fake customer identification} through fuzzy and exact name matching.
+
+\item {Customer defaulter preidction} through the SMS exploration.
+
+\item Filteration of SMSs that reflect financial transactions, and the {extraction and retrieval of credit and debit amounts} exist therein.
+
+\item Segmentation of {customer's debit transactions behaviour into payment source} (card, wallet, e-payment) and {payment targets} (grocery, internet, utiltity, school, etc.)
+
+\item (for the last two features) The average processing time is $<\!910$ seconds for $110+$ million records.
+\end{itemize}
+
+\item {\it InstaScan} - An OCR app for Pakistani CNIC and other identity documents that is capable to register and accommodate CNIC of any size, orientation, camera angle and other visual variations.
+
+\item {\it Adverse Media} - Development of automated news aggregating and classification system for checking the adversity and people related to them. It has to fit into a pipeline of criminals and politically exposed persons profiling in financial institutes and data streams.
+
+\item {\it Standard Chartered Bank's Debit Card Process Automation} - Helps debit card processing through reading data from different sources and classifying them according to request. The project helped SCB to reduce the manual working of $4\!-\!5$ hours to $\approx\!3$ milliseconds.
+
+\item {\it \href{https://play.google.com/store/apps/details?id=com.egrocer&hl=en&gl=US}{\textcolor{blue}{e-Grocer Recipe Recommendation}}} - A fuzzy rule-based search engine/recommender system that process the data (items exists in your pantry) and recommends a whole-week recipe schedule, which needs to be fulfilled accordingly with the number of family members, (and their) calorie intake, allergens, favourites (recipe), likes (ingredients) and dislikes.
+
+\item {\it Qoot Restaurant-Rider Pairing} - Algorithmic designing of Saudi-Arabian delivery app that does optimal match-making between two restaurants and targets for a single delivery person given time and distance constraints.
+
+\item {\it ATE Failure Inspection} - Detailed investigation and reporting on the automated test execution failures for Microsoft Dynamics R2-PS ERP. The reporting hierarchy includes Tyler officials from Renton, USA and Microsoft HQ at Redmond, USA.
+
+\item {\it Urdu Writer} - The first Urdu type app in iOS. Downloaded 1.25 million times.
+
+\item {\it Urdu Poems} - Many iOS applications and alphabet assembling games relating to the children Urdu education.
+\end{enumerate}
+\subsubsection*{Academic/Research Projects}
+\begin{enumerate}
+\itemsep = 0em
+\item Sarcasm and its co-relation with the sentiments in Urdu Text.
+\item Automated classification of software bugs for their severity and priority.
+\item Walk-Pattern analysis for gait diseases and gender classification.
+\item Gender-based literature exploration in Urdu micro-fiction and short stories.
+\item Affective computing in Urdu text.
+\item Prosodic-term retrieval in Urdu/Hindi poetry.
+\item Roman Urdu transliteration with character-based LSTM.
+\item Automated GDEx elicitation with machine learning and word embedding-based deep neural network.
+\item Lexical comparison of Hindi and Urdu.
+\item Phonetic Edit-Distance and its application for checking language commonality between Arabic, Hebrew, Sanskrit, Marathi, Persian, and Urdu.
+\item For more information, \hyperref[publications]{please see \textcolor{blue}{publications}}.
+\end{enumerate}
 
 % Teaching
-\section*{\normalfont\textsc{Teaching}}
+\subsection*{\textcolor{NavyBlue}{Teaching}}
 {
 \tabcolsep=4pt
 \begin{tabular}{lp{16cm}}
-Fall 2020 & CS6420 Applied Programming; CS1210 Introdcution to Computing\\
-Summer 2020 & CS6420 Applied Programming \\
-Spring 2020 & CS6420 Applied Programming; CS3310 Artificial Intelligence\\
-Fall 2019 & CS6420 Applied Programming; CS1420 Object-Oriented Programming\\
-Summer 2019 & CS1410 Computer Programming; CS3110 Software Engineering\\
-Spring 2019 & CS6420 Applied Programming; CS6610 Information Retrieval Techniques (co-taught with Dr. Shaukat Wasi); CS2510 Data Structures and Algorithms\\
-Fall 2018 & CS2510 Data Structures and Algorithms\\
-Spring 2018 & CS1410 Computer Programming\\
-Fall 2017 & CS1410 Computer Programming\\
-Spring 2017 & CS1410 Computer Programming; CS1420 Object-Oriented Programming; CS5339 Introduction to Data Science; CS5510 Advanced Research Method (co-taught with Dr. S. Wasi)\\
-2013--2016 & Courses taught to undergrad students at KIET in different semesters: Programming Fundamentals; Object-Oriented Programming; Data Structures and Algorithms; Data Mining; Software Engineering.
+%Fall 2020 & CS6420 Applied Programming; CS1210 Introdcution to Computing\\
+%Summer 2020 & CS6420 Applied Programming \\
+%Spring 2020 & CS6420 Applied Programming; CS3310 Artificial Intelligence\\
+%Fall 2019 & CS6420 Applied Programming; CS1420 Object-Oriented Programming\\
+%Summer 2019 & CS1410 Computer Programming; CS3110 Software Engineering\\
+%Spring 2019 & CS6420 Applied Programming; CS6610 Information Retrieval Techniques (co-taught with Dr. Shaukat Wasi); CS2510 Data Structures and Algorithms\\
+%Fall 2018 & CS2510 Data Structures and Algorithms\\
+%Spring 2018 & CS1410 Computer Programming\\
+%Fall 2017 & CS1410 Computer Programming\\
+%Spring 2017 & CS1410 Computer Programming; CS1420 Object-Oriented Programming; CS5339 Introduction to Data Science; CS5510 Advanced Research Method (co-taught with Dr. S. Wasi)\\
+2017--present & Courses taught to {\it undergrad students} at MAJU: CS1210 Introdcution to Computing; CS1410 Computer Programming; CS1420 Object-Oriented Programming; CS2510 Data Structures and Algorithms; CS3110 Software Engineering; CS3310 Artificial Intelligence; CS5339 Introduction to Data Science;
+\newline Courses taught to {\it grad students} at MAJU: CS6420 Applied Programming; CS5510 Advanced Research Method, CS6610 Information Retrieval Techniques.\\
+2013--2016 & Courses taught to undergrad students at KIET: Programming Fundamentals; Object-Oriented Programming; Data Structures and Algorithms; Data Mining; Software Engineering.
 \end{tabular}
 }
 
-\section*{\normalfont\textsc{Conference and Workshop Committees}}
+\subsection*{\textcolor{NavyBlue}{Conference and Workshop Committees}}
 \begin{enumerate}
 \itemsep-4pt
-\item Technical committee, 1st Mohammad Ali Jinnah University International Conference on Computing (MAJICC '21), MAJU, Karachi (2021)
-\item Organising committee, 1st International Conference on Data Sciences, MAJU, Karachi (2019)
-\item Trainer, 1-Day Workshop on Data Science with Python, UBIT, Karachi University (2018)
-\item  Trainer, Hands-on Programming with Python, MAJU, Karachi (2018)
-\item  Trainer, Programming with Python, Combat:18, KIET, Karachi (2018)
-\item  Coach, ICPC 2015 @ NUCES-FAST, Lahore (2015)
-\item  Faculty head, CodeJam, PAF-KIET, Karachi (2015)
-\item  Faculty head, Combat: The Computing Battle 2017, KIET, Karachi (2014)
-\item  Coach, Startup-Weekend, IBA, Karachi (2012)
+\item {\it Member}, Technical committee, 1st Mohammad Ali Jinnah University Intl. Conf. on Computing, MAJU, Karachi (2021)
+\item {\it Member}, Organising committee, 1st Intl. Conf. on Data Sciences, MAJU, Karachi (2019)
+\item {\it Trainer}, 1-Day Workshop on Data Science with Python, UBIT, Karachi University (2018)
+\item {\it Trainer}, Hands-on Programming with Python, MAJU, Karachi (2018)
+\item {\it Trainer}, Programming with Python, Combat:18, KIET, Karachi (2018)
+\item {\it Coach}, ICPC 2015 @ NUCES-FAST, Lahore (2015)
+\item {\it Faculty head}, CodeJam, PAF-KIET, Karachi (2015)
+\item {\it Faculty head}, Combat: The Computing Battle 2017, KIET, Karachi (2014)
+\item {\it Coach}, Startup-Weekend, IBA, Karachi (2012)
 \end{enumerate}
 
-\section*{\normalfont\textsc{University Committees}}
+\subsection*{\textcolor{NavyBlue}{University Committees}}
 \begin{enumerate}
-\itemsep-4pt 
-\item Examination paper moderation committee, MAJU, Karachi (2018--present; \emph{chair}, Spring 2020)
-\item Committee on examination policy for COVID-19 pandemic, MAJU, Karachi (\emph{chair}, Spring 2020)
-\item QEC Self-Assessment Report for undergrad and grad CS and SE programmes, MAJU, Karachi (member, 2019)
-\item External course review committee, KIET, Karachi (2019)
+\itemsep-4pt
+\item {\it Member} \& {\it Chair}, Examination paper moderation committee, MAJU, Karachi (2018--present; \emph{chair}, Spring 2020)
+\item {\it Chair}, Committee on examination policy for COVID-19 pandemic, MAJU, Karachi
+\item {\it Member}, QEC Self-Assessment Report for undergrad and grad CS and SE programmes, MAJU, Karachi
+\item {\it Member}, External course review committee, KIET, Karachi (2019)
 %\item Internal Facilitator for NCEAC, MAJU, Karachi (2019)
-\item Graduate thesis evaluation committee, MAJU, Karachi (member, 2018--present)
-\item Academic advisor, MAJU, Karachi (2017--persent)
-\item Final year project evaluation/exhibition committee, MAJU, Karachi (member, 2017--present)
-\item Founding faculty sponsor of ACM-MAJU student chapter, MAJU, Karachi (2017--present)
-\item Admission interviews committee, MAJU, Karachi (member, 2017--present)
-\item Credit transfer committee, MAJU, Karachi (member, 2018--present)
-\item Faculty sponsor of ACM-KIET student chapter, KIET, Karachi (2013--2015)
-\item Final year project committee, KIET, (member, 2013--2016)
+\item {\it Member}, Graduate thesis evaluation committee, MAJU, Karachi (2018--present)
+\item {\it Member}, Academic advisor, MAJU, Karachi (2017--persent)
+\item{\it Member}, Final year project evaluation/exhibition committee, MAJU, Karachi (2017--present)
+\item {\it Member}, Founding faculty sponsor of ACM-MAJU student chapter, MAJU, Karachi (2017--present)
+\item {\it Member}, Admission interviews committee, MAJU, Karachi (2017--present)
+\item {\it Member}, Credit transfer committee, MAJU, Karachi (2018--present)
+\item {\it Member}, Faculty sponsor of ACM-KIET student chapter, KIET, Karachi (2013--2015)
+\item {\it Member}, Final year project committee, KIET, (2013--2016)
 \end{enumerate}
 
-\section*{\normalfont\textsc{Boards}}
+\subsection*{\textcolor{NavyBlue}{Boards}}
 \begin{enumerate}
-\itemsep-4pt 
-\item Board of Studies, MAJU, Karachi (member, 2017--2019)
+\itemsep-4pt
+\item {\it Member}, Board of Studies, MAJU, Karachi (2017--2019)
 \end{enumerate}
 
-\section*{\normalfont\textsc{Publications}}
+\subsection*{\textcolor{NavyBlue}{Publications}}
+\label{publications}
 \vspace{-1em}Items are sorted chronologically in reverse order. Conference papers that later coverted into book chapters or journal articles are counted once.
-\subsection*{\normalfont\textsc{ Refereed Journal Articles}}
+\subsubsection*{\textsc{ Refereed Journal Articles}}
 \begin{enumerate}
-\itemsep-4pt 
+\itemsep-4pt
 
-	\item ``Automated Prediction of Good Dictionary EXamples (GDEX): A Comprehensive Experiment with Distant Supervision, Machine Learning and Word Embedding-based Deep Learning Techniques''. \textcolor{NavyBlue}{M.~Y.~Khan}, A. Qayoom, M. S. Nizami, M. S. Siddiqui, S. Wasi, and S. M. K. R. Raazi; \emph{Complexity}, volume 2021, 2021. DOI: \href{https://doi.org/10.1155/2021/2553199}{\textcolor{blue}{10.1155/2021/2553199}}. 
-(WoS {\bfseries SCIE} indexed /JCR-IF: {\bfseries 2.83})
-	
-	\item ``Hindustani or Hindi vs. Urdu: A Computational Approach for the Exploration of Similarities Under Phonetic Aspects''. M. S. Nizami, T. Ahmed, and \textcolor{NavyBlue}{M.~Y.~Khan}; \emph{International Journal of Advanced Computer Science and Applications}, volume 11, number 11, pages  749--755, 2020. DOI: \href{https://dx.doi.org/10.14569/IJACSA.2020.0111191}{\textcolor{blue}{10.14569/IJACSA.2020.0111191}}, (WoS {\bfseries ESCI} indexed).
-	
-	\item ``Edit Distance-based Search Approach for Retrieving  Element-wise Prosody in Hindi/Urdu Poetry''. \textcolor{NavyBlue}{M.~Y.~Khan}, M. A. Rao, S. Wasi, T. A. Minai; \emph{Indian Journal of Science and Technology}, volume 13, number 39, pages  4189--420.
-, 2020. (MJL indexed). DOI: \href{https://doi.org/10.17485/IJST/v13i39.1489}{\textcolor{blue}{10.17485/IJST/v13i39.1489}}
+\item ``\href{https://arxiv.org/abs/2008.06865}{\textcolor{blue}{Discovering Lexical Similarity Through Articulatory Feature-based Phonetic Edit Distance}}''. T. Ahmed, M. S. Nizami, \textcolor{NavyBlue}{M.~Y.~Khan}, and A. Bogliolo; \emph{IEEE Access}, volume 2021, 2021. \qone\ \blogtag{\bfseries SCIE} \blogtag{IF: \bfseries 3.36} {\small\it accepted.}
 
-	\item ``Exerting 2D-Space of Sentiment Lexicons with Machine Learning Techniques: A Hybrid Approach for Sentiment Analysis''. \textcolor{NavyBlue}{M.~Y.~Khan} and K. N. Junejo; \emph{International Journal of Advanced Computer Science and Applications}, volume 11, number 6, pages 599--608
-, 2020. (WoS {\bfseries ESCI} indexed). DOI: \href{https://doi.org/10.14569/IJACSA.2020.0110672}{\textcolor{blue}{10.14569/IJACSA.2020.0110672}}.
-       
-    \item ``Sentiment Analysis of Product Reviews in the Absence of Labelled Data using Supervised Learning Approaches''. W. Muhammad, M. Mushtaq, K. N. Junejo, and \textcolor{NavyBlue}{M.~Y.~Khan}; \emph{Malaysian Journal of Computer Science}, volume 32, number 2, pages 118--132, 2020. (WoS {\bfseries SCI} indexed). DOI: \href{https://doi.org/10.22452/mjcs.vol33no2.3}{\textcolor{blue}{10.22452/MJCS.vol33no2.3}}. JCR-IF: {\bfseries 0.7}
-    
-    \item ``Depression Detection using Na\"{\i}ve Bayes: Text based approach''. S. M. Emad, K. Ahsan, \textcolor{NavyBlue}{M.~Y.~Khan}, S. Ahmed, R. Ullah, K. Rizwan, and F. Shafiq; \emph{Interciencia}, volume 44, number 11, pages 174--182, 2020. (WoS JCR-IF: {\bfseries SCIE} indexed). JCR-IF: {\bfseries 0.26}.
-	
-	\item ``On Extraction of Event Information from Social Text Stream: An Unpretentious NLP Solution''. K. Iqbal, \textcolor{NavyBlue}{M.~Y.~Khan}, S. Wasi, S. Mahboob, and T. Ahmed; \emph{International Journal of Computer Science and Network Security}, volume 19, number 9, pages 121--131, 2019 (WoS {\bfseries ESCI} indexed).
- 
-	\item ``A Novel Approach For Ontology-Driven Information Retrieving Chatbot For Fashion Brands''. A. Nazir, \textcolor{NavyBlue}{M.~Y.~Khan}, T. Ahmed, S. I. Jami, and S. Wasi; \emph{International Journal of Advanced Computer Science and Applications}, volume 10, number 9, pages 546--552, 2019. (WoS {\bfseries ESCI} indexed). DOI: \href{https://doi.org/10.14569/IJACSA.2019.0100972}{\textcolor{blue}{10.14569/IJACSA.2019.0100972}}.
-      
-	\item ``Developing Disease Classification System based on Keyword Extraction and Supervised Learning''. M. Suffian, \textcolor{NavyBlue}{M.~Y.~Khan}, and S. Wasi; \emph{International Journal of Advanced Computer Science and Applications}, volume 9, number 9, pages 599--605, 2018. (WoS {\bfseries ESCI} indexed). DOI: \href{https://doi.org/10.14569/IJACSA.2018.090976}{\textcolor{blue}{10.14569/IJACSA.2018.090976}}.
+\item ``\href{https://doi.org/10.1155/2021/2553199}{\textcolor{blue}{Automated Prediction of Good Dictionary EXamples (GDEX): A Comprehensive Experiment with Distant Supervision, Machine Learning and Word Embedding-based Deep Learning Techniques}}''. \textcolor{NavyBlue}{M.~Y.~Khan}, A. Qayoom, M. S. Nizami, M. S. Siddiqui, S. Wasi, and S. M. K. R. Raazi; \emph{Complexity}, volume 2021, 2021. \qone\ \blogtag{\bfseries SCIE} \blogtag{IF: \bfseries 2.83}
+
+\item ``\href{https://dx.doi.org/10.14569/IJACSA.2020.0111191}{\textcolor{blue}{Hindustani or Hindi vs. Urdu: A Computational Approach for the Exploration of Similarities Under Phonetic Aspects}}''. M. S. Nizami, T. Ahmed, and \textcolor{NavyBlue}{M.~Y.~Khan}; \emph{International Journal of Advanced Computer Science and Applications}, volume 11, number 11, pages 749--755, 2020. \qthree\ \blogtag{\bfseries ESCI}
+
+\item ``\href{https://doi.org/10.17485/IJST/v13i39.1489}{\textcolor{blue}{Edit Distance-based Search Approach for Retrieving Element-wise Prosody in Hindi/Urdu Poetry}}''. \textcolor{NavyBlue}{M.~Y.~Khan}, M. A. Rao, S. Wasi, T. A. Minai; \emph{Indian Journal of Science and Technology}, volume 13, number 39, pages 4189--4201, 2020. \blogtag{{\bfseries MJL} indexed}
+
+\item ``\href{https://doi.org/10.14569/IJACSA.2020.0110672}{\textcolor{blue}{Exerting 2D-Space of Sentiment Lexicons with Machine Learning Techniques: A Hybrid Approach for Sentiment Analysis}}''. \textcolor{NavyBlue}{M.~Y.~Khan} and K. N. Junejo; \emph{International Journal of Advanced Computer Science and Applications}, volume 11, number 6, pages 599--608
+, 2020. \qthree\ \blogtag{\bfseries ESCI}}
+
+\item ``\href{https://doi.org/10.22452/mjcs.vol33no2.3}{\textcolor{blue}{Sentiment Analysis of Product Reviews in the Absence of Labelled Data using Supervised Learning Approaches}}''. W. Muhammad, M. Mushtaq, K. N. Junejo, and \textcolor{NavyBlue}{M.~Y.~Khan}; \emph{Malaysian Journal of Computer Science}, volume 32, number 2, pages 118--132, 2020. \qthree\ \blogtag{\bfseries SCI} \blogtag{IF: {\bfseries 0.7}}
+
+\item ``Depression Detection using Na\"{\i}ve Bayes: Text based approach''. S. M. Emad, K. Ahsan, \textcolor{NavyBlue}{M.~Y.~Khan}, S. Ahmed, R. Ullah, K. Rizwan, and F. Shafiq; \emph{Interciencia}, volume 44, number 11, pages 174--182, 2020. \qthree\ \blogtag{\bfseries SCIE} \blogtag{IF: {\bfseries 0.26}}
+
+\item ``\href{http://paper.ijcsns.org/07_book/201909/20190915.pdf}{\textcolor{blue}{On Extraction of Event Information from Social Text Stream: An Unpretentious NLP Solution}}''. K. Iqbal, \textcolor{NavyBlue}{M.~Y.~Khan}, S. Wasi, S. Mahboob, and T. Ahmed; \emph{International Journal of Computer Science and Network Security}, volume 19, number 9, pages 121--131, 2019. \qthree\ \blogtag{\bfseries ESCI}
+
+\item ``\href{https://doi.org/10.14569/IJACSA.2019.0100972}{\textcolor{blue}{A Novel Approach For Ontology-Driven Information Retrieving Chatbot For Fashion Brands}}''. A. Nazir, \textcolor{NavyBlue}{M.~Y.~Khan}, T. Ahmed, S. I. Jami, and S. Wasi; \emph{International Journal of Advanced Computer Science and Applications}, volume 10, number 9, pages 546--552, 2019. \qthree\ \blogtag{\bfseries ESCI}
+
+\item ``\href{https://doi.org/10.14569/IJACSA.2018.090976}{\textcolor{blue}{Developing Disease Classification System based on Keyword Extraction and Supervised Learning}}''. M. Suffian, \textcolor{NavyBlue}{M.~Y.~Khan}, and S. Wasi; \emph{International Journal of Advanced Computer Science and Applications}, volume 9, number 9, pages 599--605, 2018. \qthree\ \blogtag{\bfseries ESCI}
 \end{enumerate}
 
 
-\subsection*{\normalfont\textsc{Refereed Book Chapters}}
+\subsubsection*{\textsc{Refereed Book Chapters}}
 \begin{enumerate}
-\setcounter{enumi}{9}
-\itemsep-4pt 
- \item ``Pseudo Transfer Learning by Exploiting Monolingual Corpus: An Experiment on Roman Urdu Transliteration''. \textcolor{NavyBlue}{M.~Y.~Khan} and T. Ahmed; in: Bajwa I., Sibalija T., Jawawi D. (eds) Intelligent Technologies and Applications. INTAP 2019. \emph{Communications in Computer and Information Science}, vol 1198. Springer, Singapore. DOI \href{https://doi.org/10.1007/978-981-15-5232-8_36}{\textcolor{blue}{10.1007/978-981-15-5232-8\_36}}.
-  
-   \item ``Towards a Generic Approach for PoS Tag-wise Lexical Similarity of Languages''. M. S. Nizami, \textcolor{NavyBlue}{M.~Y.~Khan} and T. Ahmed; in: Bajwa I., Sibalija T., Jawawi D. (eds) Intelligent Technologies and Applications. INTAP 2019. \emph{Communications in Computer and Information Science}, vol 1198. Springer, Singapore. DOI \href{https://doi.org/10.1007/978-981-15-5232-8_42}{\textcolor{blue}{10.1007/978-981-15-5232-8\_42}}.
-   
- \end{enumerate}
+\setcounter{enumi}{10}
+\itemsep-4pt
+\item ``\href{https://doi.org/10.1007/978-981-15-5232-8_36}{\textcolor{blue}{Pseudo Transfer Learning by Exploiting Monolingual Corpus: An Experiment on Roman Urdu Transliteration}}''. \textcolor{NavyBlue}{M.~Y.~Khan} and T. Ahmed; in: Bajwa I., Sibalija T., Jawawi D. (eds) Intelligent Technologies and Applications. INTAP 2019. \emph{Communications in Computer and Information Science}, vol 1198. Springer, Singapore.
 
-\subsection*{\normalfont\textsc{Refereed Conference Publications}}
+\item ``\href{https://doi.org/10.1007/978-981-15-5232-8_42}{\textcolor{blue}{Towards a Generic Approach for PoS Tag-wise Lexical Similarity of Languages}}''. M. S. Nizami, \textcolor{NavyBlue}{M.~Y.~Khan} and T. Ahmed; in Bajwa I., Sibalija T., Jawawi D. (eds) Intelligent Technologies and Applications. INTAP 2019. \emph{Communications in Computer and Information Science}, vol 1198. Springer, Singapore.
+
+\end{enumerate}
+
+\subsubsection*{\textsc{Refereed Conference Publications}}
 \begin{enumerate}
-\setcounter{enumi}{11}
-\itemsep-4pt 
+\setcounter{enumi}{12}
+\itemsep-4pt
 
 %\item ``Sindhi-English Neural Machine Translation: Dataset and Prefatory Results''. \textcolor{NavyBlue}{M.~Y.~Khan} and Suffian Nizami; \emph{\small submitted.}
 
@@ -197,56 +286,49 @@ Spring 2017 & CS1410 Computer Programming; CS1420 Object-Oriented Programming; C
 
 %\item ``Urdu Question Answering System: A Baseline Model''. Muhammad Mazhar Karimi, \textcolor{NavyBlue}{M.~Y.~Khan}, and T. Ahmed; \emph{\small submitted.}
 
-\item ``Classic Fairy Tales / Children Stories of the World: Corpus Organization and Text Analytics''. \textcolor{NavyBlue}{M.~Y.~Khan} and M. U. T. Butt;  in \emph{Proceedings of the 7th International Conference of Linguistic Association of Pakistan (ICLAP '21)}, Sargodha, Pakistan. Nov. 2021. %DOI: \href{https://ieeexplore.ieee.org/document/9526252}{\textcolor{blue}{10.1109/MAJICC53071.2021.9526252}}.
+\item ``Classic Fairy Tales / Children Stories of the World: Corpus Organization and Text Analytics''. \textcolor{NavyBlue}{M.~Y.~Khan} and M.~U.~T.~Butt; in \emph{Proceedings of the 7th Intl. Conf. of Linguistic Association of Pakistan (ICLAP '21)}, Sargodha, Pakistan. Nov. 2021. %DOI: \href{https://ieeexplore.ieee.org/document/9526252}{\textcolor{blue}{10.1109/MAJICC53071.2021.9526252}}.
 
+\item ``\href{https://ieeexplore.ieee.org/document/9526252}{\textcolor{blue}{Using Patient Descriptions of Top-20 Diseases in Text Classification for Evidence-based Medicine}}''. S. Shaikh, \textcolor{NavyBlue}{M.~Y.~Khan}, and M. S. Nizami; in \emph{Proceedings of the 1st MAJU Intl. Conf. on Computing (MAJICC '21)}, Karachi, Pakistan. July. 2021.
 
-\item ``Using Patient Descriptions of Top-20 Diseases in Text Classification for Evidence-based Medicine''. Samiullah Shaikh,  \textcolor{NavyBlue}{M.~Y.~Khan}, and M. S. Nizami;  in \emph{Proceedings of the 1st Mohammad Ali Jinnah university International Conference on Computing (MAJICC '21)}, Karachi, Pakistan. July. 2021. DOI: \href{https://ieeexplore.ieee.org/document/9526252}{\textcolor{blue}{10.1109/MAJICC53071.2021.9526252}}.
+\item ``\href{https://ieeexplore.ieee.org/document/9526261}{\textcolor{blue}{Processing Fire Detection, Face Recognition, and Head Counting for an IoT-based Application in Emergency Exit}}''. K. Badr, K. Iqbal, S. Mahboob, and \textcolor{NavyBlue}{M.~Y.~Khan}; in \emph{Proceedings of the 1st MAJU Intl. Conf. on Computing (MAJICC '21)}, Karachi, Pakistan. July. 2021.
 
-\item ``Processing Fire Detection, Face Recognition, and Head Counting for an IoT-based Application in Emergency Exit''. K. Badr, K. Iqbal, S. Mahboob, and  \textcolor{NavyBlue}{M.~Y.~Khan};  in \emph{Proceedings of the 1st Mohammad Ali Jinnah university International Conference on Computing (MAJICC '21)}, Karachi, Pakistan. July. 2021.  \href{https://ieeexplore.ieee.org/document/9526261}{\textcolor{blue}{10.1109/MAJICC53071.2021.9526261}}.
+\item ``\href{https://dpi.org/10.1088/1757-899x/899/1/012016}{\textcolor{blue}{Sign Language Translation in Urdu/Hindi Through Microsoft Kinect}}''. Sohail, \textcolor{NavyBlue}{M.~Y.~Khan}, N. A. Siddiqui, and Kiran; in \emph{Proceedings of the 3rd Pak-Turk Conference On Emerging Technologies}, GIKI, Pakistan. June. 2020.
 
-\item ``Sign Language Translation in Urdu/Hindi Through Microsoft Kinect''. Sohail, \textcolor{NavyBlue}{M.~Y.~Khan}, N. A. Siddiqui, and Kiran; in \emph{Proceedings of the 3rd Pak-Turk Conference On Emerging Technologies}, Ghulam Ishaq Khan Institute of Engineering Sciences and Technology, Pakistan. June. 2020. DOI: \href{https://dpi.org/10.1088/1757-899x/899/1/012016}{\textcolor{blue}{10.1088/1757-899x/899/1/012016}}.
+\item ``\href{https://doi.org/10.1109/ICISCT49550.2020.9080043}{\textcolor{blue}{Urdu~Sentiment~Corpus (v1.0): Linguistic Exploration and Visualization of Labeled Dataset for Urdu~Sentiment~Analysis}}''. \textcolor{NavyBlue}{M.~Y.~Khan} and M. S. Nizami; in \emph{Proceedings of the 2nd IEEE Intl. Conf. on Information Science \& Communication Technology}, Karachi, Pakistan. Feb. 2020.
 
-\item ``Urdu~Sentiment~Corpus (v1.0): Linguistic Exploration and Visualization of Labeled Dataset for Urdu~Sentiment~Analysis''. \textcolor{NavyBlue}{M.~Y.~Khan} and M. S. Nizami; in \emph{Proceedings of the 2nd IEEE International Conference On Information Science \& Communication Technology}, Karachi, Pakistan. Feb. 2020. DOI: \href{https://doi.org/10.1109/ICISCT49550.2020.9080043}{\textcolor{blue}{10.1109/ICISCT49550.2020.9080043}}.
+\item ``\href{http://kjcis.pafkiet.edu.pk/index.php/kjcis/article/view/13}{\textcolor{blue}{Practices for Achieving Accuracy in Software Costing and Estimation}}''. M. A. Latif, \textcolor{NavyBlue}{M.~Y.~Khan}, and K. Bashir; in \emph{Proceedings of the 2nd Intl. Conf. on Computing \& Information Sciences}, KIET, Karachi, Pakistan. Nov. 2018.
 
-% \item ``Pseudo Transfer Learning by Exploiting Monolingual Corpus: An Experiment on Roman Urdu Transliteration''. \textcolor{NavyBlue}{M.~Y.~Khan} and T. Ahmed; in \emph{Proceedings of the 2nd International Conference on Intelligent Technologies and Applications}, Islamia University Bhawalpur, Pakistan. Springer. Nov. 2019.
- 
-%  \item ``Towards a Generic Approach for PoS Tag-wise Lexical Similarity of Languages''. M. S. Nizami, \textcolor{NavyBlue}{M.~Y.~Khan} and T. Ahmed; in \emph{Proceedings of the 2nd International Conference on Intelligent Technologies and Applications}, Islamia University Bhawalpur, Pakistan. Springer. Nov. 2019.
-  
-  \item ``Practices for Achieving Accuracy in Software Costing and Estimation''. M. A. Latif, \textcolor{NavyBlue}{M.~Y.~Khan}, and K. Bashir; in \emph{Proceedings of the 2nd International Conference on Computing \& Information Sciences}, Karachi Institute of Economics and Technology, Karachi, Pakistan. Nov. 2018.
-  
-  \item ``Drive pattern analyzer using smartphones''. S. Mahboob, K. Iqbal, H. Farman, \textcolor{NavyBlue}{M.~Y.~Khan}, and S. Wasi; in \emph{ Proceedings of the 13th IEEE International Conference on Emerging Technologies}, Capital University of Science and Technology, Islamabad, Pakistan. IEEE, pages 1-5, 2017. DOI: \href{https://doi.org/10.1109/ICET.2017.8281659}{\textcolor{blue}{10.1109/ICET.2017.8281659}}.
-  
-  \item ``Harnessing English Sentiment Lexicons for Polarity Detection in Urdu Tweets: A Baseline Approach''. \textcolor{NavyBlue}{M.~Y.~Khan}, S. M. Emaduddin, and K. N. Junejo;  in \emph{Proceedings of the 11th IEEE International Conference on Semantic Computing}, San Diago, USA. IEEE, pages. 242-24, 2017. DOI: \href{https://doi.org/10.1109/ICSC.2017.68}{\textcolor{blue}{10.1109/ICSC.2017.68}}.
+\item ``\href{https://doi.org/10.1109/ICET.2017.8281659}{\textcolor{blue}{Drive pattern analyzer using smartphones}}''. S. Mahboob, K. Iqbal, H. Farman, \textcolor{NavyBlue}{M.~Y.~Khan}, and S. Wasi; in \emph{ Proceedings of the 13th IEEE Intl. Conf. on Emerging Technologies}, CUST, Islamabad, Pakistan. IEEE, pages 1-5, 2017.
+
+\item ``\href{https://doi.org/10.1109/ICSC.2017.68}{\textcolor{blue}{Harnessing English Sentiment Lexicons for Polarity Detection in Urdu Tweets: A Baseline Approach}}''. \textcolor{NavyBlue}{M.~Y.~Khan}, S. M. Emaduddin, and K. N. Junejo; in \emph{Proceedings of the 11th IEEE Intl. Conf. on Semantic Computing}, San Diago, USA. IEEE, pages. 242-24, 2017.
 \end{enumerate}
 
-\subsection*{\normalfont\textsc{ Unpublished Work}}
+\subsubsection*{\textsc{ Unpublished Work}}
 \begin{enumerate}
-\setcounter{enumi}{19}
-\itemsep-4pt 
+\setcounter{enumi}{20}
+\itemsep-4pt
 
-	\item ``Discovering Lexical Similarity Through Articulatory Feature-based Phonetic Edit Distance''. T. Ahmed, M. S. Nizami, \textcolor{NavyBlue}{M.~Y.~Khan}; \textcolor{blue}{\url{https://arxiv.org/abs/2008.06865}}.
-	
-	\item ``Developing Senitment Lexicon and Labelled Corpus for Urdu Sentiment Analysis''. \textcolor{NavyBlue}{Muhammad~Yaseen Khan}, R. Zaheer; \emph{\small experimentation completed; in draft.}
-	
-	\item ``Developing Emotion Lexicon and Labelled Corpus for Urdu Emotion Detection''. \textcolor{NavyBlue}{Muhammad Yaseen Khan}, T. Khalid; \emph{\small experimentation completed; in draft.}	
+\item ``Developing Sentiment Lexicon and Labelled Corpus for Urdu Sentiment Analysis''. \textcolor{NavyBlue}{M.~Y.~Khan}, R. Zaheer; \emph{\small experimentation completed; in draft.}
 
-	\item ``Urdu Named-Entity Recognition System''. T. Ahmed, \textcolor{NavyBlue}{M.~Y.~Khan}, and S. Nizami; \emph{\small experimentation completed; in draft.}
-	
-	\item ``LSTM-based Urdu Word Segmentation''. \textcolor{NavyBlue}{M.~Y.~Khan} and T. Ahmed; \emph{\small experimentation completed; in draft.}
-	
-	\item ``Depressive Sentiment Analysis in Microblogs: A Machine Learning Approach''. S. M. Emaduddin, K. Ahsan, \textcolor{NavyBlue}{M.~Y.~Khan}, and S. Ahmed; \emph{\small under review.}
-	
-	\item ``Efficient Recipe Recommendation System Using Signature-Trees''. A. Sohani, \textcolor{NavyBlue}{M.~Y.~Khan}, and R. Ullah; 
-	%\emph{University of Sindh Journal of Information and Communication Technology} 
-	\emph{\small accepted with revision.}
-	
-	
+\item ``Developing Emotion Lexicon and Labelled Corpus for Urdu Emotion Detection''. \textcolor{NavyBlue}{M.~Y.~Khan}, T. Khalid; \emph{\small experimentation completed; in draft.}
+
+\item ``Urdu Named-Entity Recognition System''. T. Ahmed, \textcolor{NavyBlue}{M.~Y.~Khan}, and S. Nizami; \emph{\small experimentation completed; in draft.}
+
+\item ``LSTM-based Urdu Word Segmentation''. \textcolor{NavyBlue}{M.~Y.~Khan} and T. Ahmed; \emph{\small experimentation completed; in draft.}
+
+\item ``Depressive Sentiment Analysis in Microblogs: A Machine Learning Approach''. S. M. Emaduddin, K. Ahsan, \textcolor{NavyBlue}{M.~Y.~Khan}, and S. Ahmed; \emph{\small under review.}
+
+\item ``Efficient Recipe Recommendation System Using Signature-Trees''. A. Sohani, \textcolor{NavyBlue}{M.~Y.~Khan}, and R. Ullah;
+%\emph{University of Sindh Journal of Information and Communication Technology}
+\emph{\small accepted with revision.}
+
+
 
 
 \end{enumerate}
 
 
-\subsection*{\normalfont\textsc{Conference and Workshop Attendee}}
+\subsubsection*{\textsc{Conference and Workshop Attendee}}
 \begin{enumerate}
 \itemsep-4pt
 \item 7th Intl. Conf. of Linguistics of Pakistan (ICLAP), Univesity of Sargodha, Pakistan (2021)
@@ -256,57 +338,54 @@ Spring 2017 & CS1410 Computer Programming; CS1420 Object-Oriented Programming; C
 \item 2nd Intl. Conf. on Intelligent Technologies and Applications (INTAP), IUB, Bhahawalpur (2019)
 \item 1st Intl. Conf. on Data Science, MAJU, Karachi, Pakistan (2019)
 \item 2nd Intl. Conf. on Computing and Information Sciences, KIET, Karachi, Pakistan (2018)
-\item HEC-NCEAC 3-Day Workshop on Data Science, Islamabad (2017) 
+\item HEC-NCEAC 3-Day Workshop on Data Science, Islamabad (2017)
 \end{enumerate}
 
 %\section*{\normalfont\textsc{Current Students}}
 %\begin{enumerate}
-%\itemsep-4pt 
+%\itemsep-4pt
 %\end{enumerate}
 
-\section*{\normalfont\textsc{Graduated Students}}
+\subsection*{\textcolor{NavyBlue}{Graduated Students}}
 \begin{enumerate}
-\itemsep-4pt 
- \item M. S. Nizami (MS Thesis - CS); ``Formulating Patient Descriptions to Support Evidence Based Medicine''. Spring 2018. Co-supervised by Dr S. Wasi.
+\itemsep-4pt
+\item \href{https://www.linkedin.com/in/msuffian/}{\textcolor{blue}{M. S. Nizami}} (MS Thesis - CS); ``{\it Formulating Patient Descriptions to Support Evidence Based Medicine}''. Spring 2018. Co-supervised by Dr S. Wasi.
 
- \item Alvina Naveed (MS Thesis - SE); ``Exploiting Bug Narrations for Predictive Analysis on Bug Severity''. Fall 2020.
+\item \href{https://www.linkedin.com/in/alvina-naveed-7832a0117/}{\textcolor{blue}{Alvina Naveed}} (MS Thesis - SE); ``{\it Exploiting Bug Narrations for Predictive Analysis on Bug Severity}''. Fall 2020.
 
- \item Abdul Basit (MS Thesis - CS); ``Human motion tracking for gait analysis through smart phones and machine learning approaches''.  Fall 2020.
+\item \href{https://www.linkedin.com/in/abdul-basit-a151b0b9/}{\textcolor{blue}{Abdul Basit}} (MS Thesis - CS); ``{\it Human motion tracking for gait analysis through smart phones and machine learning approaches}''. Fall 2020.
 
-  \item Abdul Qayoom Bhatti (MS Thesis - CS); ``Supervised Learning-based Good Dictionary Examples Recommendation System''.  Fall 2020. 
-  
-  \item Mirza Muhammad Muneeb Baig (MS Thesis - CS); ``Sarcasm detection in Urdu Text''. Fall 2020.
+\item Abdul Qayoom Bhatti (MS Thesis - CS); ``{\it Supervised Learning-based Good Dictionary Examples Recommendation System}''. Fall 2020.
+
+\item \href{}{\textcolor{blue}{Mirza Muhammad Muneeb Baig}} (MS Thesis - CS); ``{\it Sarcasm detection in Urdu Text}''. Fall 2020.
 \end{enumerate}
 
 
-\section*{\normalfont\textsc{Awards and Honours}}
+\subsection*{\textcolor{NavyBlue}{Awards and Honours}}
 \begin{enumerate}
-\itemsep-4pt 
- \item Awardee of Dean's List 2014 and 2015 during MS.SE, KIET
+\itemsep-4pt
+\item Awardee of Dean's List 2014 and 2015 during MS.SE, KIET
 \end{enumerate}
 
-\section*{\normalfont\textsc{Research Interests}}
-%Artificial Neural Networks/Deep Learning $\cdot$ 
-Natural Language Processing $\cdot$ Information Extraction $\cdot$ Information Retrieval $\cdot$ Affective Computing in Text $\cdot$ Lexical Analysis $\cdot$ Discourse Analysis $\cdot$ Computational Linguistics $\cdot$  Corpus Linguistics $\cdot$ Sociolinguistics $\cdot$ NLP for scared source Indic languages (specifically languages in Perso-Arabic scripts)
 
-\section*{\normalfont\textsc{Skills}}
+\subsection*{\textcolor{NavyBlue}{Skills}}
 \hfill\begin{minipage}{0.17\textwidth}
 Computing\textcolor{lightgray}{\dotfill}\\
 Languages\textcolor{lightgray}{\dotfill}
 \end{minipage}%
 \begin{minipage}{0.8\textwidth}
 Programming (Python, Java, JavaScript, C\#, MySQL) $\cdot$ Typesetting with \LaTeX\\
-English $\cdot$ Urdu $\cdot$ Hindi $\cdot$ Persian/Farsi %$\cdot$ Pushto  Arabic $\cdot$$\cdot$ Sindhi $\cdot$ Punjabi
+English $\cdot$ Urdu $\cdot$ Hindi $\cdot$ Persian/Farsi %$\cdot$ Pushto Arabic $\cdot$$\cdot$ Sindhi $\cdot$ Punjabi
 \end{minipage}
 
-\section*{\normalfont\textsc{References}}
+\subsection*{\textcolor{NavyBlue}{References}}
 \begin{enumerate}
 \itemsep-4pt
- \item Dr. Tafseer Ahmed Khan, Professor and Head Center for Language Computing, MAJU, Karachi.
- \item Dr. Shaukat Wasi, Professor and Dean Faculty of Computing, MAJU, Karachi.
- \item Dr. Asim Imdad Wagan, Professor and Dean Faculty of Engineering, MAJU, Karachi.
- \item Dr. Khurum Nazir Junejo, Head of R\&D at Love for Data.
- \item Dr. Muhammad Khalid Khan, Professor and Director CoCIS, PAF-KIET, Karachi.
+\item Dr. Khurum Nazir Junejo, former Head of R\&D at Love for Data.
+\item Dr. Tafseer Ahmed Khan, former Professor and Head Center for Language Computing, MAJU, Karachi.
+\item Dr. Shaukat Wasi, Professor and Dean Faculty of Computing, MAJU, Karachi.
+\item Dr. Asim Imdad Wagan, Professor and Dean Faculty of Engineering, MAJU, Karachi.
+\item Dr. Muhammad Khalid Khan, Professor and Director CoCIS, PAF-KIET, Karachi.
 \end{enumerate}
 
-\end{document}  
+\end{document}
