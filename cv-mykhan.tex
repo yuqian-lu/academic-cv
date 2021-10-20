@@ -8,17 +8,11 @@
 \newcommand{\ublue}[1]{{\color{Indigo}\ul{#1}}}
 
 
-\newcommand{\qone}{\colorbox{YellowGreen}{\makebox(10,9){\textcolor{white}{\ Q1}}}}
-\newcommand{\qtwo}{\colorbox{Gold}{\makebox(10,9){\textcolor{white}{\ Q2}}}}
-\newcommand{\qthree}{\colorbox{DarkOrange}{\makebox(10,9){\textcolor{white}{Q3}}}}
-\newcommand{\qfour}{\colorbox{Tomato}{\makebox(10,9){\textcolor{white}{\ Q4}}}}
-
-
 \usepackage{fontspec}
 \usepackage{newtxmath}
 %\setmainfont{Gentium Plus}
-\setmainfont{Charter Regular.ttf}[BoldFont = Charter Bold.ttf , ItalicFont = Charter Italic.ttf , BoldItalicFont = Charter Bold Italic.ttf ]
-\setmainfont{Cambria}
+%\setmainfont{Charter Regular.ttf}[BoldFont = Charter Bold.ttf , ItalicFont = Charter Italic.ttf , BoldItalicFont = Charter Bold Italic.ttf ]
+\setmainfont{Gentium Book Basic}
 
 \usepackage{polyglossia}
 \setmainlanguage{english}
@@ -38,9 +32,24 @@
 
 \usepackage{tcolorbox}
 \newtcbox{\blogtag}{nobeforeafter,
-colframe=SteelBlue,colback=white,
-boxrule=0.5pt,arc=4pt,
-boxsep=0pt,left=3pt,right=3pt,top=4pt,bottom=4pt,tcbox raise base}
+colframe=LightGray,colback=white,
+boxrule=0.75pt,arc=4pt,
+boxsep=0pt,left=3pt,right=3pt,top=3pt,bottom=3pt,tcbox raise base}
+
+\newtcbox{\qonetag}{nobeforeafter,
+colframe=YellowGreen,colback=YellowGreen,
+boxrule=0.75pt,arc=0pt,
+boxsep=0pt,left=3pt,right=3pt,top=3pt,bottom=3pt,tcbox raise base}
+
+\newtcbox{\qtwotag}{nobeforeafter,
+colframe=Gold,colback=Gold,
+boxrule=0.75pt,arc=0pt,
+boxsep=0pt,left=3pt,right=3pt,top=3pt,bottom=3pt,tcbox raise base}
+
+\newtcbox{\qthreetag}{nobeforeafter,
+colframe=DarkOrange,colback=DarkOrange,
+boxrule=0.75pt,arc=0pt,
+boxsep=0pt,left=3pt,right=3pt,top=3pt,bottom=3pt,tcbox raise base}
 
 %\newcommand\dunderline[3][-1pt]{{%
 % \sbox0{#3}%
@@ -53,7 +62,7 @@ boxsep=0pt,left=3pt,right=3pt,top=4pt,bottom=4pt,tcbox raise base}
 a4paper,
 total={190mm,255mm}}
 
-\title{\vspace{-3em}{\huge\textcolor{NavyBlue}{Muhammad Yaseen Khan}}
+\title{\vspace{-3em}{\huge\textcolor{NavyBlue}{\bfseries Muhammad Yaseen Khan}}
 %$\cdot$ {\huge\texturdu{محمد یاسین خان}}
 %\\\small Academic Curriculum Vit\ae}
 \\\small Curriculum Vit\ae}
@@ -77,7 +86,13 @@ Pakistan\\
 Tel: \href{tel:+923323240104}{+92-332-3240104}\\
 Email: \href{mailto:yaseenkhan.yzai@gmail.com}{yaseenkhan.yzai@gmail.com}\\
 Skype: muhammad\_yaseen\_khan\\
-URL: \href{https://scholar.google.com/citations?user=a_d2KTEAAAAJ&hl=en}{\textcolor{blue}{Google Scholar}} $\cdot$ \href{https://www.researchgate.net/profile/Muhammad_Yaseen_Khan}{\textcolor{blue}{ResearchGate}} $\cdot$ \href{https://www.github.com/MuhammadYaseenKhan}{\textcolor{blue}{GitHub}}
+\href{https://scholar.google.com/citations?user=a_d2KTEAAAAJ&hl=en}{\includegraphics[width=16pt]{logos/google-scholar.png}} \quad
+\href{https://orcid.org/
+0000-0002-9049-8492}{\includegraphics[width=16pt]{logos/orcid-round.png}} \quad
+\href{https://www.researchgate.net/profile/Muhammad_Yaseen_Khan}{\includegraphics[width=16pt]{logos/research-gate.png}} \quad
+\href{https://www.github.com/MuhammadYaseenKhan}{\includegraphics[width=16pt]{logos/github-round.png}} \quad
+\href{https://www.linkedin.com/in/muhammadyaseenkhan/}{\includegraphics[width=16pt]{logos/linkedin-round.png}} 
+%\href{https://scholar.google.com/citations?user=a_d2KTEAAAAJ&hl=en}{\textcolor{blue}{Google Scholar}} $\cdot$ \href{https://www.researchgate.net/profile/Muhammad_Yaseen_Khan}{\textcolor{blue}{ResearchGate}} $\cdot$ \href{https://www.github.com/MuhammadYaseenKhan}{\textcolor{blue}{GitHub}}
 \end{minipage}
 
 % Educational Background
@@ -115,7 +130,7 @@ Jun. 2013--Dec. 2016 & \emph{ Lecturer} & CoCIS, Karachi Institute of Economics 
 Feb. 2012--Jun. 2013 & \emph{ Software Engineer II} & Mazik Global Technologies, Khi, Pakistan / Microsoft Inc., Renton, USA \\
 Jan. 2011--Feb. 2012 & \emph{ Web+iOS App. Developer} & Counterpoint, Karachi, Pakistan / Qurtaba LLC., Fremont, USA \\
 Jul. 2010--Dec. 2010 & \emph{ Web Developer} & Revolutionary Technologies, Karachi, Pakistan\\
-Jan. 2010--Jun. 2010 & \emph{ Web Developr (Intern)} & SprintTechSolutions, Karachi, Pakistan
+Jan. 2010--Jun. 2010 & \emph{ Web Developer (Intern)} & SprintTechSolutions, Karachi, Pakistan
 \end{tabular}
 }
 
@@ -132,11 +147,11 @@ and {English} data; the main features are itemized below:
 
 \item {Fake customer identification} through fuzzy and exact name matching.
 
-\item {Customer defaulter preidction} through the SMS exploration.
+\item {Customer defaulter prediction} through the SMS exploration.
 
-\item Filteration of SMSs that reflect financial transactions, and the {extraction and retrieval of credit and debit amounts} exist therein.
+\item Filtration of SMSs that reflect financial transactions, and the {extraction and retrieval of credit and debit amounts} exist therein.
 
-\item Segmentation of {customer's debit transactions behaviour into payment source} (card, wallet, e-payment) and {payment targets} (grocery, internet, utiltity, school, etc.)
+\item Segmentation of {customer's debit transactions behaviour into payment source} (card, wallet, e-payment) and {payment targets} (grocery, internet, utility, school, etc.)
 
 \item (for the last two features) The average processing time is $<\!1000$ seconds for $110+$ million records.
 \end{itemize}
@@ -188,8 +203,8 @@ and {English} data; the main features are itemized below:
 %Spring 2018 & CS1410 Computer Programming\\
 %Fall 2017 & CS1410 Computer Programming\\
 %Spring 2017 & CS1410 Computer Programming; CS1420 Object-Oriented Programming; CS5339 Introduction to Data Science; CS5510 Advanced Research Method (co-taught with Dr. S. Wasi)\\
-2017--present & Courses taught to \emph{ undergrad students} at MAJU: CS1210 Introdcution to Computing; CS1410 Computer Programming; CS1420 Object-Oriented Programming; CS2510 Data Structures and Algorithms; CS3110 Software Engineering; CS3310 Artificial Intelligence; CS5339 Introduction to Data Science;
-\newline Courses taught to \emph{ grad students} at MAJU: CS6420 Applied Programming; CS5510 Advanced Research Method, CS6610 Information Retrieval Techniques.\\
+2017--present & Courses taught to \emph{ grad students} at MAJU: CS6420 Applied Programming; CS5510 Advanced Research Method, CS6610 Information Retrieval Techniques.
+\newline Courses taught to \emph{ undergrad students} at MAJU: CS1210 Introdcution to Computing; CS1410 Computer Programming; CS1420 Object-Oriented Programming; CS2510 Data Structures and Algorithms; CS3110 Software Engineering; CS3310 Artificial Intelligence; CS5339 Introduction to Data Science;\\
 2013--2016 & Courses taught to undergrad students at KIET: Programming Fundamentals; Object-Oriented Programming; Data Structures and Algorithms; Data Mining; Software Engineering.
 \end{tabular}
 }
@@ -234,35 +249,36 @@ and {English} data; the main features are itemized below:
 
 \subsection*{\textcolor{NavyBlue}{Publications}}
 \label{publications}
-\vspace{-1em}Items are sorted chronologically in reverse order. Conference papers that later coverted into book chapters or journal articles are counted once.
-\subsubsection*{\textsc{ Refereed Journal Articles}}
+Items are sorted chronologically in reverse order. Conference papers that later coverted into book chapters or journal articles are counted once.
+\subsubsection*{{ Refereed Journal Articles}}
 \begin{enumerate}
 \itemsep-4pt
 
-\item ``\href{https://arxiv.org/abs/2008.06865}{\textcolor{blue}{Discovering Lexical Similarity Through Articulatory Feature-based Phonetic Edit Distance}}''. T. Ahmed, M. S. Nizami, \textcolor{NavyBlue}{M.~Y.~Khan}, and A. Bogliolo; \emph{IEEE Access}, volume 2021, 2021. \qone\ \blogtag{\bfseries SCIE} \blogtag{IF: \bfseries 3.36} {\small\it accepted.}
+\item ``\href{https://arxiv.org/abs/2008.06865}{\textcolor{blue}{Discovering Lexical Similarity Through Articulatory Feature-based Phonetic Edit Distance}}''. T. Ahmed, M. S. Nizami, \textcolor{NavyBlue}{M.~Y.~Khan}, and A. Bogliolo; \emph{IEEE Access}, volume 2021, 2021. \qonetag{\textcolor{white}{\bfseries Q1}} \blogtag{\bfseries SCIE} \blogtag{IF: \bfseries 3.36} {\small\it accepted.}
 
-\item ``\href{https://doi.org/10.1155/2021/2553199}{\textcolor{blue}{Automated Prediction of Good Dictionary EXamples (GDEX): A Comprehensive Experiment with Distant Supervision, Machine Learning and Word Embedding-based Deep Learning Techniques}}''. \textcolor{NavyBlue}{M.~Y.~Khan}, A. Qayoom, M. S. Nizami, M. S. Siddiqui, S. Wasi, and S. M. K. R. Raazi; \emph{Complexity}, volume 2021, 2021. \qone\ \blogtag{\bfseries SCIE} \blogtag{IF: \bfseries 2.83}
+\item ``\href{https://doi.org/10.1155/2021/2553199}{\textcolor{blue}{Automated Prediction of Good Dictionary EXamples (GDEX): A Comprehensive Experiment with Distant Supervision, Machine Learning and Word Embedding-based Deep Learning Techniques}}''. \textcolor{NavyBlue}{M.~Y.~Khan}, A. Qayoom, M. S. Nizami, M. S. Siddiqui, S. Wasi, and S. M. K. R. Raazi; \emph{Complexity}, volume 2021, 2021. \qonetag{\textcolor{white}{\bfseries Q1}} \blogtag{\bfseries SCIE} \blogtag{IF: \bfseries 2.83}
 
-\item ``\href{https://dx.doi.org/10.14569/IJACSA.2020.0111191}{\textcolor{blue}{Hindustani or Hindi vs. Urdu: A Computational Approach for the Exploration of Similarities Under Phonetic Aspects}}''. M. S. Nizami, T. Ahmed, and \textcolor{NavyBlue}{M.~Y.~Khan}; \emph{International Journal of Advanced Computer Science and Applications}, volume 11, number 11, pages 749--755, 2020. \qthree\ \blogtag{\bfseries ESCI}
+\item ``\href{https://dx.doi.org/10.14569/IJACSA.2020.0111191}{\textcolor{blue}{Hindustani or Hindi vs. Urdu: A Computational Approach for the Exploration of Similarities Under Phonetic Aspects}}''. M. S. Nizami, T. Ahmed, and \textcolor{NavyBlue}{M.~Y.~Khan}; \emph{International Journal of Advanced Computer Science and Applications}, volume 11, number 11, pages 749--755, 2020. \qthreetag{\textcolor{white}{\bfseries Q3}} \blogtag{\bfseries ESCI}
 
 \item ``\href{https://doi.org/10.17485/IJST/v13i39.1489}{\textcolor{blue}{Edit Distance-based Search Approach for Retrieving Element-wise Prosody in Hindi/Urdu Poetry}}''. \textcolor{NavyBlue}{M.~Y.~Khan}, M. A. Rao, S. Wasi, T. A. Minai; \emph{Indian Journal of Science and Technology}, volume 13, number 39, pages 4189--4201, 2020. \blogtag{{\bfseries MJL} indexed}
 
 \item ``\href{https://doi.org/10.14569/IJACSA.2020.0110672}{\textcolor{blue}{Exerting 2D-Space of Sentiment Lexicons with Machine Learning Techniques: A Hybrid Approach for Sentiment Analysis}}''. \textcolor{NavyBlue}{M.~Y.~Khan} and K. N. Junejo; \emph{International Journal of Advanced Computer Science and Applications}, volume 11, number 6, pages 599--608
-, 2020. \qthree\ \blogtag{\bfseries ESCI}}
+, 2020. \qthreetag{\textcolor{white}{\bfseries Q3}} \blogtag{\bfseries ESCI}
 
-\item ``\href{https://doi.org/10.22452/mjcs.vol33no2.3}{\textcolor{blue}{Sentiment Analysis of Product Reviews in the Absence of Labelled Data using Supervised Learning Approaches}}''. W. Muhammad, M. Mushtaq, K. N. Junejo, and \textcolor{NavyBlue}{M.~Y.~Khan}; \emph{Malaysian Journal of Computer Science}, volume 32, number 2, pages 118--132, 2020. \qthree\ \blogtag{\bfseries SCI} \blogtag{IF: {\bfseries 0.7}}
+\item ``\href{https://doi.org/10.22452/mjcs.vol33no2.3}{\textcolor{blue}{Sentiment Analysis of Product Reviews in the Absence of Labelled Data using Supervised Learning Approaches}}''. W. Muhammad, M. Mushtaq, K. N. Junejo, and \textcolor{NavyBlue}{M.~Y.~Khan}; \emph{Malaysian Journal of Computer Science}, volume 32, number 2, pages 118--132, 2020. \qthreetag{\textcolor{white}{\bfseries Q3}} \blogtag{\bfseries SCI} \blogtag{IF: {\bfseries 0.7}}
 
-\item ``Depression Detection using Na\"{\i}ve Bayes: Text based approach''. S. M. Emad, K. Ahsan, \textcolor{NavyBlue}{M.~Y.~Khan}, S. Ahmed, R. Ullah, K. Rizwan, and F. Shafiq; \emph{Interciencia}, volume 44, number 11, pages 174--182, 2020. \qthree\ \blogtag{\bfseries SCIE} \blogtag{IF: {\bfseries 0.26}}
+\item ``Depression Detection using Na\"{\i}ve Bayes: Text based approach''. S. M. Emad, K. Ahsan, \textcolor{NavyBlue}{M.~Y.~Khan}, S. Ahmed, R. Ullah, K. Rizwan, and F. Shafiq; \emph{Interciencia}, volume 44, number 11, pages 174--182, 2020. \qtwotag{\textcolor{white}{\bfseries Q2}} \blogtag{\bfseries SCIE} \blogtag{IF: {\bfseries 0.26}}
 
 \item ``\href{http://paper.ijcsns.org/07_book/201909/20190915.pdf}{\textcolor{blue}{On Extraction of Event Information from Social Text Stream: An Unpretentious NLP Solution}}''. K. Iqbal, \textcolor{NavyBlue}{M.~Y.~Khan}, S. Wasi, S. Mahboob, and T. Ahmed; \emph{International Journal of Computer Science and Network Security}, volume 19, number 9, pages 121--131, 2019.  \blogtag{\bfseries ESCI}
 
-\item ``\href{https://doi.org/10.14569/IJACSA.2019.0100972}{\textcolor{blue}{A Novel Approach For Ontology-Driven Information Retrieving Chatbot For Fashion Brands}}''. A. Nazir, \textcolor{NavyBlue}{M.~Y.~Khan}, T. Ahmed, S. I. Jami, and S. Wasi; \emph{International Journal of Advanced Computer Science and Applications}, volume 10, number 9, pages 546--552, 2019. \qthree\ \blogtag{\bfseries ESCI}
+\item ``\href{https://doi.org/10.14569/IJACSA.2019.0100972}{\textcolor{blue}{A Novel Approach For Ontology-Driven Information Retrieving Chatbot For Fashion Brands}}''. A. Nazir, \textcolor{NavyBlue}{M.~Y.~Khan}, T. Ahmed, S. I. Jami, and S. Wasi; \emph{International Journal of Advanced Computer Science and Applications}, volume 10, number 9, pages 546--552, 2019. \qthreetag{\textcolor{white}{\bfseries Q3}} \blogtag{\bfseries ESCI}
 
-\item ``\href{https://doi.org/10.14569/IJACSA.2018.090976}{\textcolor{blue}{Developing Disease Classification System based on Keyword Extraction and Supervised Learning}}''. M. Suffian, \textcolor{NavyBlue}{M.~Y.~Khan}, and S. Wasi; \emph{International Journal of Advanced Computer Science and Applications}, volume 9, number 9, pages 599--605, 2018. \qthree\ \blogtag{\bfseries ESCI}
+\item ``\href{https://doi.org/10.14569/IJACSA.2018.090976}{\textcolor{blue}{Developing Disease Classification System based on Keyword Extraction and Supervised Learning}}''. M. Suffian, \textcolor{NavyBlue}{M.~Y.~Khan}, and S. Wasi; \emph{International Journal of Advanced Computer Science and Applications}, volume 9, number 9, pages 599--605, 2018. %\qthreetag{\textcolor{white}{\bfseries Q3}}
+\blogtag{\bfseries ESCI}
 \end{enumerate}
 
 
-\subsubsection*{\textsc{Refereed Book Chapters}}
+\subsubsection*{{Refereed Book Chapters}}
 \begin{enumerate}
 \setcounter{enumi}{10}
 \itemsep-4pt
@@ -272,7 +288,7 @@ and {English} data; the main features are itemized below:
 
 \end{enumerate}
 
-\subsubsection*{\textsc{Refereed Conference Publications}}
+\subsubsection*{{Refereed Conference Publications}}
 \begin{enumerate}
 \setcounter{enumi}{12}
 \itemsep-4pt
@@ -303,7 +319,7 @@ and {English} data; the main features are itemized below:
 \item ``\href{https://doi.org/10.1109/ICSC.2017.68}{\textcolor{blue}{Harnessing English Sentiment Lexicons for Polarity Detection in Urdu Tweets: A Baseline Approach}}''. \textcolor{NavyBlue}{M.~Y.~Khan}, S. M. Emaduddin, and K. N. Junejo; in \emph{Proceedings of the 11th IEEE Intl. Conf. on Semantic Computing}, San Diago, USA. IEEE, pages. 242-24, 2017.
 \end{enumerate}
 
-\subsubsection*{\textsc{ Unpublished Work}}
+\subsubsection*{{ Unpublished Work}}
 \begin{enumerate}
 \setcounter{enumi}{20}
 \itemsep-4pt
