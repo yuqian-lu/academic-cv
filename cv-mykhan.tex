@@ -2,6 +2,8 @@
 % !TEX TS-program = XeLaTeX
 % ! xelatex mal-urdu.tex
 \documentclass[a4paper, 10pt]{article}
+\usepackage{enumerate}
+\usepackage[shortlabels]{enumitem}
 \usepackage{soul}
 \setulcolor{Gainsboro}
 \setul{2pt}{1.5pt}
@@ -214,7 +216,7 @@ and {English} data; the main features are itemized below:
 
 \subsection*{\textcolor{NavyBlue}{Conference and Workshop Committees}}
 \begin{enumerate}
-\itemsep-4pt
+\itemsep = 0em
 \item \emph{ Member}, Technical committee, 1st Mohammad Ali Jinnah University Intl. Conf. on Computing, MAJU, Karachi (2021)
 \item \emph{ Member}, Organising committee, 1st Intl. Conf. on Data Sciences, MAJU, Karachi (2019)
 \item \emph{ Trainer}, 1-Day Workshop on Data Science with Python, UBIT, Karachi University (2018)
@@ -228,8 +230,8 @@ and {English} data; the main features are itemized below:
 
 \subsection*{\textcolor{NavyBlue}{University Committees}}
 \begin{enumerate}
-\itemsep-4pt
-\item \emph{ Member} \& \emph{ Chair}, Examination paper moderation committee, MAJU, Karachi (2018--present; \emph{chair}, Spring 2020)
+\itemsep = 0em
+\item \emph{Member \& Chair}, Examination paper moderation committee, MAJU, Karachi (2018--present; \emph{chair}, Spring 2020)
 \item \emph{ Chair}, Committee on examination policy for COVID-19 pandemic, MAJU, Karachi
 \item \emph{ Member}, QEC Self-Assessment Report for undergrad and grad CS and SE programmes, MAJU, Karachi
 \item \emph{ Member}, External course review committee, KIET, Karachi (2019)
@@ -246,7 +248,7 @@ and {English} data; the main features are itemized below:
 
 \subsection*{\textcolor{NavyBlue}{Boards}}
 \begin{enumerate}
-\itemsep-4pt
+\itemsep = 0em
 \item \emph{ Member}, Board of Studies, MAJU, Karachi (2017--2019)
 \end{enumerate}
 
@@ -254,8 +256,8 @@ and {English} data; the main features are itemized below:
 \label{publications}
 Items are sorted chronologically in reverse order. Conference papers that later coverted into book chapters or journal articles are counted once.
 \subsubsection*{{ Refereed Journal Articles}}
-\begin{enumerate}
-\itemsep-4pt
+\begin{enumerate}[J\arabic*.] 
+\itemsep = 0em
 
 \item ``\href{https://arxiv.org/abs/2008.06865}{\textcolor{MediumBlue}{Discovering Lexical Similarity Through Articulatory Feature-based Phonetic Edit Distance}}''. T. Ahmed, M. S. Nizami, \textcolor{Black}{M.~Y.~Khan}, and A. Bogliolo; \emph{IEEE Access}, volume 2021, 2021. \qonetag{\textcolor{white}{\textsf\bfseries Q1}} \blogtag{\bfseries SCIE} \blogtag{IF: \bfseries 3.36} {\small\it accepted.}
 
@@ -282,9 +284,8 @@ Items are sorted chronologically in reverse order. Conference papers that later 
 
 
 \subsubsection*{{Refereed Book Chapters}}
-\begin{enumerate}
-\setcounter{enumi}{10}
-\itemsep-4pt
+\begin{enumerate}[B\arabic*.] 
+\itemsep = 0em
 \item ``\href{https://doi.org/10.1007/978-981-15-5232-8_36}{\textcolor{MediumBlue}{Pseudo Transfer Learning by Exploiting Monolingual Corpus: An Experiment on Roman Urdu Transliteration}}''. \textcolor{Black}{M.~Y.~Khan} and T. Ahmed; in: Bajwa I., Sibalija T., Jawawi D. (eds) Intelligent Technologies and Applications. INTAP 2019. \emph{Communications in Computer and Information Science}, vol 1198. Springer, Singapore.
 
 \item ``\href{https://doi.org/10.1007/978-981-15-5232-8_42}{\textcolor{MediumBlue}{Towards a Generic Approach for PoS Tag-wise Lexical Similarity of Languages}}''. M. S. Nizami, \textcolor{Black}{M.~Y.~Khan} and T. Ahmed; in Bajwa I., Sibalija T., Jawawi D. (eds) Intelligent Technologies and Applications. INTAP 2019. \emph{Communications in Computer and Information Science}, vol 1198. Springer, Singapore.
@@ -292,9 +293,8 @@ Items are sorted chronologically in reverse order. Conference papers that later 
 \end{enumerate}
 
 \subsubsection*{{Refereed Conference Publications}}
-\begin{enumerate}
-\setcounter{enumi}{12}
-\itemsep-4pt
+\begin{enumerate}[C\arabic*.] 
+\itemsep = 0em
 
 %\item ``Sindhi-English Neural Machine Translation: Dataset and Prefatory Results''. \textcolor{Black}{M.~Y.~Khan} and Suffian Nizami; \emph{\small submitted.}
 
@@ -323,9 +323,8 @@ Items are sorted chronologically in reverse order. Conference papers that later 
 \end{enumerate}
 
 \subsubsection*{{ Unpublished Work}}
-\begin{enumerate}
-\setcounter{enumi}{20}
-\itemsep-4pt
+\begin{enumerate}[U\arabic*.] 
+\itemsep = 0em
 
 \item ``Developing Sentiment Lexicon and Labelled Corpus for Urdu Sentiment Analysis''. \textcolor{Black}{M.~Y.~Khan}, R. Zaheer; \emph{\small experimentation completed; in draft.}
 
@@ -394,7 +393,7 @@ Languages\textcolor{lightgray}{\dotfill}
 \end{minipage}%
 \begin{minipage}{0.8\textwidth}
 Programming (Python, Java, JavaScript, C\#, MySQL) $\cdot$ Typesetting with \LaTeX\\
-English $\cdot$ Urdu $\cdot$ Hindi $\cdot$ Persian/Farsi %$\cdot$ Pushto Arabic $\cdot$$\cdot$ Sindhi $\cdot$ Punjabi
+English $\cdot$ Urdu $\cdot$ Hindi $\cdot$ Persian/Farsi
 \end{minipage}
 
 \subsection*{\textcolor{NavyBlue}{References}}
